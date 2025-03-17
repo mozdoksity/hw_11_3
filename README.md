@@ -28,6 +28,40 @@
 
 *Приведите скриншот команды 'curl -X GET 'localhost:9200/_cluster/health?pretty', сделанной на сервере с установленным Elasticsearch. Где будет виден нестандартный cluster_name*.
 
+```
+version: '3.7'
+
+services:
+  elasticsearch:
+    image: docker.io/library/elasticsearch:8.16.5
+    container_name: elasticsearch
+    environment:
+      - cluster.name=barsukov
+      - xpack.security.enabled=false
+      - discovery.type=single-node
+    ulimits:
+      memlock:
+        soft: -1
+        hard: -1
+      nofile:
+        soft: 65536
+        hard: 65536
+    cap_add:
+      - IPC_LOCK
+    volumes:
+      - elasticsearch-data:/usr/share/elasticsearch/data
+    ports:
+      - 9200:9200
+      - 9300:9300
+
+
+
+volumes:
+  elasticsearch-data:
+    driver: local
+
+```
+
 <img src = "img/11_3_1.jpg" width = 100%>
 
 ---
