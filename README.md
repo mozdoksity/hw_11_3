@@ -91,3 +91,7 @@ volumes:
 Установите и запустите Filebeat. Переключите поставку логов Nginx с Logstash на Filebeat. 
 
 *Приведите скриншот интерфейса Kibana, на котором видны логи Nginx, которые были отправлены через Filebeat.*
+
+<img src = "img/11_3_4.jpg" width = 100%>
+<img src = "img/11_3_4_1.jpg" width = 100%>
+<img src = "img/11_3_4_2.jpg" width = 100%>
