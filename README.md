@@ -30,6 +30,7 @@
 
 ```
 version: '3.7'
+![image](https://github.com/user-attachments/assets/2ffc7f95-e759-408b-b7ea-43ae27a91c57)
 
 services:
   elasticsearch:
